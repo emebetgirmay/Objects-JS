@@ -37,11 +37,9 @@ const User = {
 console.log(User.totalSteps());
 console.log(User.averageSteps());
 
-// Create a Recipe constructor with name, ingredients (array), and cookTime in minutes. Add a method displayRecipe() that logs the name and all
-//  ingredients in a readable list, and another method isQuickMeal() that returns true if cookTime is 30 minutes or less.
 
-//create a constructor
-// log the name and the ingridents in 2 lines
+//create a constructor  with name, ingredients (array), and cookTime in minutes.
+//  Add a method displayRecipe() that log the name and the ingridents in 2 lines
 // use condition(ternary) to return boolean if the condition fulfiled
 
 function Recipe (name, ingridents, cookTime){
@@ -63,12 +61,11 @@ console.log(foods.displayRecipe());
 console.log(foods.isQuickMeal());
 
 
-3.// Create a Car object with properties like model, mileage, and serviceHistory (an array of service dates).
-//  Add a method addService(date) to add a new service record, and lastServiceDate() to return the most recent service date.
 
-// create an object
-// add an element to an array
-//log the last element
+
+// create an object with properties like model, mileage, and serviceHistory (an array of service dates).
+// add an element to an array using push method
+//log the last element using length -1
 const car = {
     model: "Camry",
     mileage: 80000,
@@ -84,10 +81,10 @@ car.addService("02-10-2025");
 console.log(car.serviceHistory);
 console.log(car.lastServiceDate());
 
-//4. Create a Playlist object with a property songs (an array of song titles). Add methods addSong(title) to add a song, 
-// removeSong(title) to delete one, and listSongs() to log all songs currently in the playlist.
 
-//create an object
+//create an object with properties songs (an array of song titles)
+//Add 3 methods to the constructor that are addSong(title) which adds an element to the array and removeSong(title) that removes an element 
+// and listSong() to log all the elements on the array
 // add an element to an array
 //remove an element from the array
 //list the elements of the array
@@ -112,9 +109,9 @@ const Playlist = {
     Playlist.listSongs();
 
 
-    //5. Create a Course constructor with title, lessons (an array), and completedLessons (array). Add a method markComplete(lesson) 
-    // that adds the lesson to completedLessons, and a method getProgress() that returns a string like "3 out of 5 lessons completed".
-   //create a constructor
+   //create a constructor with title, lessons (an array), and completedLessons (array)
+   //Add a method markComplete(lesson) that adds the lesson to completedLessons
+   //Add a method getProgress() that returns a string like "3 out of 5 lessons completed".
    // push an element to an empty array
    //return a string that interpolates variables 
     function Course(title, lessons) {
