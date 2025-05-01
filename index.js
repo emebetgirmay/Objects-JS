@@ -1,8 +1,9 @@
-//1.  Create a User object with properties like name, stepsWalked (an array of daily steps), and a method totalSteps() that calculates and 
-// returns the total number of steps walked. Add another method averageSteps() that returns the average steps per day.
+ 
 
 
-//create an object that has parametrs of string, key-value pairs and two methods 
+//create an object with properties like name, stepsWalked (an array of daily steps),
+// Add a method totalSteps() that calculates and returns the total number of steps walked.
+//Add another method averageSteps() that returns the average steps per day.
 // find sum of steps
 // find length
 //find average by deviding sum to length but length must be different from zero
@@ -114,28 +115,22 @@ const Playlist = {
    //Add a method getProgress() that returns a string like "3 out of 5 lessons completed".
    // push an element to an empty array
    //return a string that interpolates variables 
-    function Course(title, lessons) {
-            this.title = title;
-            this.lessons = lessons;
-            this.completedLessons = [];
-        
-        this.markComplete = function(lesson) {
-            // const index = this.lessons.indexOf(lesson);
-            if (lesson !== this.lessons.at(-1)) {
-         this.completedLessons.push(lesson);
-            }
-         
-        };
-        this.getProgress = function() {
-            const completed = this.completedLessons.size;
-            const total = this.lessons.length;
-            return `${completed} out of ${total} lessons completed`;
-        };
-
-    };
-    const course = new Course('Frontend web', ['Objects', 'Array', 'String', 'Variables', 'Inheritance'])
-
-course.markComplete();
+   function Course(title, lessons) {
+    this.title = title;
+    this.lessons = lessons;
+    this.completedLessons = [];
+this.markComplete = function(lesson) {
+    if (lesson !== this.lessons.at(-1)) {
+ this.completedLessons.push(lesson);
+    }
+};
+this.getProgress = function() {
+    const completed = this.completedLessons.length;
+    const total = this.lessons.length;
+    return `${completed} out of ${total} lessons completed`;
+};
+};
+const course = new Course('Frontend web', ['Objects', 'Array', 'String', 'Variables', 'Inheritance'])
+course.markComplete("objects");
 console.log(course.completedLessons);
 console.log(course.getProgress());
-
