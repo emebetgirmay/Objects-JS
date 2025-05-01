@@ -138,8 +138,7 @@ const Playlist = {
     };
     const course = new Course('Frontend web', ['Objects', 'Array', 'String', 'Variables', 'Inheritance'])
 
-course.markComplete('Inheritance');
-// course.markComplete();
+course.markComplete();
 console.log(course.completedLessons);
 console.log(course.getProgress());
 
