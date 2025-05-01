@@ -2,6 +2,11 @@
 // returns the total number of steps walked. Add another method averageSteps() that returns the average steps per day.
 
 
+//create an object that has parametrs of string, key-value pairs and two methods 
+// find sum of steps
+// find length
+//find average by deviding sum to length but length must be different from zero
+// log the function
 const User = {
     name: "Emebet",
     stepsWalked: [
@@ -35,6 +40,10 @@ console.log(User.averageSteps());
 // Create a Recipe constructor with name, ingredients (array), and cookTime in minutes. Add a method displayRecipe() that logs the name and all
 //  ingredients in a readable list, and another method isQuickMeal() that returns true if cookTime is 30 minutes or less.
 
+//create a constructor
+// log the name and the ingridents in 2 lines
+// use condition(ternary) to return boolean if the condition fulfiled
+
 function Recipe (name, ingridents, cookTime){
 this.name = name;
 this.ingridents = ingridents;
@@ -57,7 +66,9 @@ console.log(foods.isQuickMeal());
 3.// Create a Car object with properties like model, mileage, and serviceHistory (an array of service dates).
 //  Add a method addService(date) to add a new service record, and lastServiceDate() to return the most recent service date.
 
-
+// create an object
+// add an element to an array
+//log the last element
 const car = {
     model: "Camry",
     mileage: 80000,
@@ -76,7 +87,10 @@ console.log(car.lastServiceDate());
 //4. Create a Playlist object with a property songs (an array of song titles). Add methods addSong(title) to add a song, 
 // removeSong(title) to delete one, and listSongs() to log all songs currently in the playlist.
 
-
+//create an object
+// add an element to an array
+//remove an element from the array
+//list the elements of the array
 const Playlist = {
         songs: ["Song-1", "Song-2", "Song-3"],
         addSong:function(title) {
@@ -100,7 +114,9 @@ const Playlist = {
 
     //5. Create a Course constructor with title, lessons (an array), and completedLessons (array). Add a method markComplete(lesson) 
     // that adds the lesson to completedLessons, and a method getProgress() that returns a string like "3 out of 5 lessons completed".
-
+   //create a constructor
+   // push an element to an empty array
+   //return a string that interpolates variables 
     function Course(title, lessons) {
             this.title = title;
             this.lessons = lessons;
@@ -109,7 +125,7 @@ const Playlist = {
         this.markComplete = function(lesson) {
             // const index = this.lessons.indexOf(lesson);
             if (lesson !== this.lessons.at(-1)) {
-            this.completedLessons.push(lesson);
+         this.completedLessons.push(lesson);
             }
          
         };
@@ -122,8 +138,8 @@ const Playlist = {
     };
     const course = new Course('Frontend web', ['Objects', 'Array', 'String', 'Variables', 'Inheritance'])
 
-
-course.completedLessons;
-console.log(course.markComplete());
+course.markComplete('Inheritance');
+// course.markComplete();
+console.log(course.completedLessons);
 console.log(course.getProgress());
 
